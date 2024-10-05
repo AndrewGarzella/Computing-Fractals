@@ -54,15 +54,6 @@ function ComputeTri(x, y, Iters)
         ComputeTri(c[1],c[2], Iters-1)
     end
     AddTooScat(1,1,1)
-    # for i in 1:Iters
-        
-
-    #     # scatter!(a[1], a[2], label = false,mc=:green)
-    #     # scatter!(b[1], b[2], label = false, mc=:yellow)
-    #     # scatter!(c[1], c[2], label = false, mc=:red)
-    # end
-    # AddTooScat(0,0,1)
-
 end
 function AddTooScat(x, y, Color)
     if Color == 1
@@ -79,14 +70,8 @@ x0 = [0 0 1]
 y0 = [1 0 0]
 x = [0.5 0.5 0.0]
 y = [0.5 0.0 0.5]
-# a = w1(x,y)
-# b = w2(x,y)
-# c = w3(x,y)
-# (a,b,c) = W(x,y)
 scatter(x, y, xaxis =("Sierpinski Triangle",(-0.1,1),  0:0.25:1, font(5, "Courier")),label = false, mc=:blue, yaxis =((-0.1,1),  0:0.25:1, font(5, "Courier")))
 scatter!(x0, y0, label = false, mc=:black)
 ComputeTri(x, y, 5)
 
-#   git config --global user.email "you@example.com"
-#   git config --global user.name "Your Name"
 
